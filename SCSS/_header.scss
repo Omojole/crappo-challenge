@@ -1,0 +1,25 @@
+.header{
+    height: 80px;
+    padding: 20px 0;
+
+    // padding: 12px;
+}
+// .list{
+// @include flex(flex,space-around,center)
+// }
+.mobile-nav{
+    @include flex(flex,space-between,center);
+    // background-color:$primary-color;
+    color: white;
+    width: 100%;
+    // width: 358px;
+}
+.logo-container{
+    width: 135px;
+    @include flex(flex,center,center)
+}
+.fa-bars{
+    // width: 2rem;
+    color:$clr-white;
+    margin-right: 1rem;
+}

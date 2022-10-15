@@ -4,64 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>CRAPPO</title>
   </head>
   <body>
-    <header>
-      <div>
-        <img src="./IMAGE/Logo.jpg" alt="crappo-logo" />
-        <span>CRAPPO</span>
+    <header class="header">
+      <div class="mobile-nav">
+
+        <div class="logo-container">
+          <img src="./IMAGE/Logo.png" alt="crappo-logo" />
+          <span>CRAPPO</span>
+        </div>
+        <i class="fa-solid fa-bars"></i>
       </div>
-      <nav>
-        <ul>
+
+      <nav class="nav-container">
+        <ul role="list" class="list">
           <li>Products</li>
           <li>Features</li>
           <li>About</li>
           <li>Contact</li>
         </ul>
+        <div>
+          <span>Login</span>
+          <span>|</span>
+          <button type="button">Register</button>
+        </div>
       </nav>
-      <div>
-        <span>Login</span>
-        <span>|</span>
-        <button type="button">Register</button>
-      </div>
     </header>
     <main>
-      <section>
-        <div>
-          <span>75% SAVE</span>
-          <span>For the Black Friday weekend</span>
+      <section class="section-1">
+        <div class="first-div">
+          <div class="save">
+            <span class="percentage">75% SAVE</span>
+            <small class="black-friday">For the Black Friday weekend</small>
+          </div>
           <h1>Fastest & secure platform to invest in crypto</h1>
           <p>
             Buy and sell cryptocurrencies, trusted by 10M wallets with over $30
             billion in transactions.
           </p>
-          <button type="button">Try for FREE <span>></span></button>
+          <button type="button" class="btn">Try for FREE <span class="base"><img src="./IMAGE/icons/eva_chevron-right-outline.png" alt=""></span></button>
         </div>
         <div>
           <img
-            src="./IMAGE/illustrations/Illustration1.jpg"
+            src="./IMAGE/illustrations/Illustration1.png"
             alt="Illustration1"
           />
         </div>
       </section>
-      <section>
-        <div>
-          <div>
+      <section class="section-2">
+        <div class="numbers">
+          <div class="num_">
             <img src="./IMAGE/icons/Icon1.png" alt="bar-chart" />
             <div>
               <h2>$30B</h2>
               <p>Digital Currency Exchanged</p>
             </div>
           </div>
-          <div>
-            <img src="./IMAGE/icons/Icon2.jpg" alt="person" />
+          <div class="num_">
+            <img src="./IMAGE/icons/Icon2.png" alt="person" />
             <div>
               <h2>10M+</h2>
               <p>Trusted Wallets Investor</p>
             </div>
           </div>
-          <div>
+          <div class="num_">
             <img src="./IMAGE/icons/icon3.png" alt="world" />
             <div>
               <h2>195</h2>
@@ -70,10 +78,6 @@
           </div>
         </div>
         <div>
-          <img
-            src="./IMAGE/illustrations/Illustration2.png"
-            alt="Illustration2"
-          />
           <div>
             <h2>Why you should choose CRAPPO</h2>
             <p>
@@ -81,6 +85,11 @@
               financial borders, extra fees, and fake reviews.
             </p>
             <button type="button">Learn More</button>
+            <img
+            src="./IMAGE/illustrations/Illustration2.png"
+            alt="Illustration2"
+          />
+
           </div>
         </div>
         <div>
@@ -90,12 +99,11 @@
             Exercitation veniam consequat sunt nostrud amet.
           </p>
         </div>
-        <div>
+        <div class="positioning">
           <form>
             <input
               type="text"
-              name="hash-rate"
-              aria-roledescription="calculate hash-rate"
+              name="hash-rate" placeholder="Enter your hash rate" aria-label="calculate hash-rate"
             />
             <select name="unit" id="unit">
               <option value="TH/s">TH/s</option>
@@ -221,7 +229,7 @@
       </div>
       <div>
         <div>
-           <img src="./IMAGE/Logo.jpg" alt="crappo-logo" />
+          <img src="./IMAGE/Logo.jpg" alt="crappo-logo" />
           <span>CRAPPO</span>
         </div>
         <div>
@@ -236,32 +244,35 @@
         </div>
         <div>
           <h4>Resources</h4>
-       <ul>
-        <li><a href="#">Download Whitepaper</a></li>
-        <li><a href="#">Smart Token</a></li>
-        <li><a href="#">Blockchain Explorer</a></li>
-        <li><a href="#">Crypto API</a></li>
-        <li><a href="#">Interest</a></li>
-       </ul>
+          <ul>
+            <li><a href="#">Download Whitepaper</a></li>
+            <li><a href="#">Smart Token</a></li>
+            <li><a href="#">Blockchain Explorer</a></li>
+            <li><a href="#">Crypto API</a></li>
+            <li><a href="#">Interest</a></li>
+          </ul>
         </div>
         <div>
           <h4>We accept following payment systems</h4>
           <div>
-            <img src="./IMAGE/cards/Visa.png" alt="visa-card">
-            <img src="./IMAGE/cards/Mastercard.png" alt="mastercard">
-            <img src="./IMAGE/cards/Bitcoin card.png" alt="bitcoin-card">
+            <img src="./IMAGE/cards/Visa.png" alt="visa-card" />
+            <img src="./IMAGE/cards/Mastercard.png" alt="mastercard" />
+            <img src="./IMAGE/cards/Bitcoin card.png" alt="bitcoin-card" />
           </div>
         </div>
       </div>
-        <p>©2021 CRAPPO. All rights reserved</p>
-        <div>
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-linkedin"></i>
-        </div>
+      <p>©2021 CRAPPO. All rights reserved</p>
+      <div>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
     </footer>
-    <script src="https://kit.fontawesome.com/fd0f757bae.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/fd0f757bae.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
