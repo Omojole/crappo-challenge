@@ -79,6 +79,10 @@ select {
   color: rgb(255, 255, 255);
 }
 
+.section-3 {
+  background-color: rgb(242, 242, 242);
+}
+
 .header {
   height: 80px;
   padding: 20px 0;
@@ -116,7 +120,7 @@ select {
 }
 
 .save {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
   color: rgb(255, 255, 255);
   width: 75vw;
   border-radius: 8px;
@@ -170,22 +174,98 @@ select {
   margin-right: 1.5rem;
 }
 
+.choose-crappo {
+  margin-top: 2rem;
+}
+.choose-crappo > p {
+  margin-top: 1rem;
+}
+.choose-crappo > button {
+  margin-top: 2rem;
+  width: 8rem;
+  padding: 7px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(54, 113, 233);
+  color: rgb(255, 255, 255);
+}
+
 .positioning {
+  bottom: -5%;
+  position: absolute;
   background-color: rgb(255, 255, 255);
   width: 90vw;
-}
-.positioning > form {
-  height: 400px;
+  height: 500px;
   border-radius: 22px;
   color: rgb(13, 13, 43);
+  padding: 1rem;
+}
+.positioning > form {
+  margin-bottom: 2rem;
   margin-top: 5px;
   display: flex;
   flex-direction: column;
 }
+.positioning > form > input {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-top: 1rem;
+}
+.positioning > form > select {
+  margin-top: 3rem;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.positioning > form > button {
+  margin-top: 3rem;
+  width: 7rem;
+  padding: 8px;
+  background-color: rgb(54, 113, 233);
+  border-radius: 18px;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+.positioning > div > .estimation {
+  color: rgb(54, 113, 233);
+}
+.positioning > div > h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.positioning > div > h2 > .value {
+  color: rgb(54, 113, 233);
+}
+.positioning > div > p {
+  opacity: 0.6;
+}
 
 .section-2 {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 30rem;
+}
+
+.crypto1 {
+  border-radius: 17px;
+  margin-top: 5rem;
+  background-color: rgb(43, 7, 110);
+  padding: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.crypto2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-3 {
+  padding-top: 9rem;
 }/*# sourceMappingURL=main.css.map */

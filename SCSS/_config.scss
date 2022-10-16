@@ -27,7 +27,7 @@ ol[role="list"] {
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 
 /* Set core body defaults */
@@ -77,7 +77,9 @@ $primary-color: rgb(13, 13, 43);
 $secondary-color: rgb(43, 7, 110);
 $tertiary-color: rgb(54, 113, 233);
 $clr-white:rgb(255, 255, 255);
-$light-white:rgba(255, 255, 255,.5);
+$light-white:rgba(255, 255, 255,.1);
+$section-3: rgb(242, 242, 242);
+;
 
 //Mixins
 @mixin flex($display,$justify-content,$align-items) {
@@ -85,7 +87,12 @@ $light-white:rgba(255, 255, 255,.5);
    justify-content: $justify-content;
    align-items: $align-items;
 }
+
+//background color for each sections
 .header,.section-1,.section-2{
   background-color: $primary-color;
   color: $clr-white;
+}
+.section-3{
+  background-color:$section-3 ;
 }
