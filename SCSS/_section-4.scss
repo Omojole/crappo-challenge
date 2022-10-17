@@ -1,0 +1,32 @@
+.section-4{
+    padding-top: 4rem;
+    &>h2{
+        margin-bottom: 5rem;
+    }
+    &>div>.invest{
+        &>button{
+            margin-top: 1rem;
+            padding: .5rem;
+            border-radius: 1.5rem;
+            color: $clr-white;
+            background-color: $tertiary-color;
+        }
+        margin-bottom:1.5rem ;
+    }
+    &>.stats{
+margin-top: 5rem;
+&>.div1{
+    &>button{
+        background-color: $tertiary-color;
+        color: $clr-white;
+        padding: .5rem;
+        border-radius: 18px;
+    }
+}
+&>.div2{
+    margin-top: 2rem;
+}
+
+    }
+}
+//do mixin for buttons

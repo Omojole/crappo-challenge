@@ -74,7 +74,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.header, .section-1, .section-2 {
+.header, .section-1, .section-2, .section-4 {
   background-color: rgb(13, 13, 43);
   color: rgb(255, 255, 255);
 }
@@ -250,22 +250,86 @@ select {
   padding-bottom: 30rem;
 }
 
-.crypto1 {
+.crypto {
   border-radius: 17px;
   margin-top: 5rem;
   background-color: rgb(43, 7, 110);
-  padding: 4rem;
-  text-align: center;
+  padding: 3rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
 }
-
-.crypto2 {
+.crypto > .crypto-images {
+  width: 6rem;
+  margin: auto;
+}
+.crypto > .crypto-images > .crypto-label {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.crypto > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 12px;
+  border-radius: 16px;
+  width: 10rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(54, 113, 233);
+}
+.crypto > button > img {
+  padding: 5px;
+  margin-left: 17px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
 
-.section-3 {
-  padding-top: 9rem;
+.crypto2, .crypto3 {
+  background-color: rgb(255, 255, 255);
+  color: rgb(13, 13, 43);
+}
+.crypto2 > button, .crypto3 > button {
+  border: 1px solid grey;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}
+
+.section-3 > h2 {
+  margin-top: 6rem;
+}
+.section-3 > button {
+  color: rgb(255, 255, 255);
+}
+
+.section-4 {
+  padding-top: 4rem;
+}
+.section-4 > h2 {
+  margin-bottom: 5rem;
+}
+.section-4 > div > .invest {
+  margin-bottom: 1.5rem;
+}
+.section-4 > div > .invest > button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(54, 113, 233);
+}
+.section-4 > .stats {
+  margin-top: 5rem;
+}
+.section-4 > .stats > .div1 > button {
+  background-color: rgb(54, 113, 233);
+  color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  border-radius: 18px;
+}
+.section-4 > .stats > .div2 {
+  margin-top: 2rem;
 }/*# sourceMappingURL=main.css.map */
