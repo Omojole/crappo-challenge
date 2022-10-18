@@ -1,5 +1,5 @@
 .section-4{
-    padding-top: 4rem;
+    padding: 4rem 1.5rem 0 1.5rem;
     &>h2{
         margin-bottom: 5rem;
     }
@@ -26,7 +26,23 @@ margin-top: 5rem;
 &>.div2{
     margin-top: 2rem;
 }
+&>.div3{
+    margin-top: 7rem;
+    &>div{
 
+        &>.analysis{
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        &>button{
+            background-color: $tertiary-color;
+            color: $clr-white;
+            padding: .5rem;
+            border-radius: 18px;
+            margin-bottom: 2rem;
+        }
+    }
+}
     }
 }
 //do mixin for buttons

@@ -1,0 +1,64 @@
+footer {
+  padding: 12rem 14px 14px 0;
+  @include flex(flex,center,center);
+  flex-direction: column;
+  & > .mine {
+    background-color: $tertiary-color;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 20px;
+    // height: 12rem;
+    // text-align: center;
+    padding: 1rem;
+    // align-items:flex-start;
+    & > p {
+      margin-top: 1rem;
+    }
+    & > form {
+      & > input {
+        &::placeholder {
+          color: $clr-white;
+        }
+        background-color: $tertiary-color;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid $clr-white;
+        margin-bottom: 0.7rem;
+      }
+      & > div {
+        width: 100%;
+        text-align: center;
+        & > button {
+          padding: 0.6rem;
+          border-radius: 1rem;
+          border: none;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+  .links {
+    @include flex(flex,center,center);
+    flex-direction: column;
+    margin-top: 4rem;
+    &>div:first-child{
+      text-align: center;
+      @include flex(flex,center,center);
+      margin-bottom: 3rem;
+    }
+    &>div{
+      margin: 1rem 0 2rem 0;
+    &>.payment{
+      display: flex;
+      margin-top: 1rem;
+    }
+  }
+  &>ul>li>a{
+color: $clr-white;
+text-decoration: none;
+  }
+}
+&>div>i{
+  margin-left: 12px;
+}
+}

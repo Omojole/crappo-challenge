@@ -74,7 +74,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.header, .section-1, .section-2, .section-4 {
+.header, .section-1, .section-2, .section-4, footer {
   background-color: rgb(13, 13, 43);
   color: rgb(255, 255, 255);
 }
@@ -85,7 +85,7 @@ select {
 
 .header {
   height: 80px;
-  padding: 20px 0;
+  padding: 20px 1rem 0 1rem;
 }
 
 .mobile-nav {
@@ -97,15 +97,14 @@ select {
 }
 
 .logo-container {
-  width: 135px;
+  width: 120px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .fa-bars {
   color: rgb(255, 255, 255);
-  margin-right: 1rem;
 }
 
 .nav-container {
@@ -117,6 +116,7 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem 0 1rem;
 }
 
 .save {
@@ -150,6 +150,7 @@ select {
   border-radius: 32px;
   height: 2.5rem;
   width: 9rem;
+  color: rgb(255, 255, 255);
   background-color: rgb(54, 113, 233);
 }
 .btn > .base {
@@ -247,7 +248,7 @@ select {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 30rem;
+  padding: 0 1rem 30rem 1rem;
 }
 
 .crypto {
@@ -298,15 +299,15 @@ select {
   background-color: rgb(255, 255, 255);
 }
 
-.section-3 > h2 {
-  margin-top: 6rem;
+.section-3 {
+  padding: 6rem 1rem 0 1rem;
 }
 .section-3 > button {
   color: rgb(255, 255, 255);
 }
 
 .section-4 {
-  padding-top: 4rem;
+  padding: 4rem 1.5rem 0 1.5rem;
 }
 .section-4 > h2 {
   margin-bottom: 5rem;
@@ -332,4 +333,90 @@ select {
 }
 .section-4 > .stats > .div2 {
   margin-top: 2rem;
+}
+.section-4 > .stats > .div3 {
+  margin-top: 7rem;
+}
+.section-4 > .stats > .div3 > div > .analysis {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.section-4 > .stats > .div3 > div > button {
+  background-color: rgb(54, 113, 233);
+  color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  border-radius: 18px;
+  margin-bottom: 2rem;
+}
+
+footer {
+  padding: 12rem 14px 14px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer > .mine {
+  background-color: rgb(54, 113, 233);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 20px;
+  padding: 1rem;
+}
+footer > .mine > p {
+  margin-top: 1rem;
+}
+footer > .mine > form > input {
+  background-color: rgb(54, 113, 233);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  margin-bottom: 0.7rem;
+}
+footer > .mine > form > input::-moz-placeholder {
+  color: rgb(255, 255, 255);
+}
+footer > .mine > form > input:-ms-input-placeholder {
+  color: rgb(255, 255, 255);
+}
+footer > .mine > form > input::placeholder {
+  color: rgb(255, 255, 255);
+}
+footer > .mine > form > div {
+  width: 100%;
+  text-align: center;
+}
+footer > .mine > form > div > button {
+  padding: 0.6rem;
+  border-radius: 1rem;
+  border: none;
+  margin-bottom: 12px;
+}
+footer .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+footer .links > div:first-child {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+footer .links > div {
+  margin: 1rem 0 2rem 0;
+}
+footer .links > div > .payment {
+  display: flex;
+  margin-top: 1rem;
+}
+footer .links > ul > li > a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+footer > div > i {
+  margin-left: 12px;
 }/*# sourceMappingURL=main.css.map */

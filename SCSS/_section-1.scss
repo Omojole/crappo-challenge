@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 1rem 0 1rem;
 }
 .save{
     // text-align: center;
@@ -37,6 +38,7 @@
     // padding:16px, 16px, 16px, 24px;
     height: 2.5rem;
     width: 9rem;
+    color: $clr-white;
     background-color: $tertiary-color;
     &>.base{
 background-color: $clr-white;

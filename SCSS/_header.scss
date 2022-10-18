@@ -1,6 +1,6 @@
 .header{
     height: 80px;
-    padding: 20px 0;
+    padding: 20px 1rem 0 1rem;
 
     // padding: 12px;
 }
@@ -15,11 +15,11 @@
     // width: 358px;
 }
 .logo-container{
-    width: 135px;
-    @include flex(flex,center,center)
+    width: 120px;
+    @include flex(flex,space-between,center)
 }
 .fa-bars{
     // width: 2rem;
     color:$clr-white;
-    margin-right: 1rem;
+    // margin-right: 1rem;
 }
