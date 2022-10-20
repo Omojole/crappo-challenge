@@ -1,27 +1,8 @@
 .section-1{
-    display: flex;
+    position: relative;
+    @include flex(flex,center,center);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 0 1rem 0 1rem;
-}
-.save{
-    // text-align: center;
-    background-color:$light-white;
-    // opacity: .1;
-    color: $clr-white;
-    width: 75vw;
-    border-radius: 8px;
-    height: 32px;
-    &>.percentage{
-        background-color: white;
-        color: black;
-        border-radius: 10px;
-        padding: 4px 12px 4px 4px;
-    }
-    &>.black-friday{
-        margin-left: 19px;
-    }
 }
 .first-div{
     margin-top: 1rem;
@@ -29,20 +10,43 @@
         margin-top: 3rem;
     }
 
-}
-.btn{
+
+&>.btn{
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 32px;
-    // padding:16px, 16px, 16px, 24px;
+    padding:1.5rem;
     height: 2.5rem;
-    width: 9rem;
+    margin-top: 2rem;
+    width: 11rem;
     color: $clr-white;
     background-color: $tertiary-color;
     &>.base{
 background-color: $clr-white;
 border-radius: 40%;
-// padding: 8px;
     }
 }
+}
+@include query-md{
+    .section-1{
+        padding: 0;
+        display: flex;
+flex-direction: row;
+        padding: 0 120px 0 120px;
+    
+    .first-div{
+        width: 588px;
+        margin-top: 3rem;
+&>h1{
+    @include font(700,50px)
+
+    }
+}
+    &>.second-div{
+        width: 604px;
+        margin-top: 50px;
+    }
+
+}
+    }

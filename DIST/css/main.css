@@ -1,4 +1,5 @@
 /* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 *,
 *::before,
 *::after {
@@ -16,7 +17,12 @@ figure,
 blockquote,
 dl,
 dd {
+  font-family: "Rubik", sans-serif;
   margin: 0;
+}
+
+* {
+  font-family: r;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -74,7 +80,11 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.header, .section-1, .section-2, .section-4, footer {
+header,
+.section-1,
+.section-2,
+.section-4,
+footer {
   background-color: rgb(13, 13, 43);
   color: rgb(255, 255, 255);
 }
@@ -86,6 +96,9 @@ select {
 .header {
   height: 80px;
   padding: 20px 1rem 0 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .mobile-nav {
@@ -103,37 +116,81 @@ select {
   align-items: center;
 }
 
-.fa-bars {
-  color: rgb(255, 255, 255);
+.now {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
+@media screen and (min-width: 768px) {
+  .now {
+    display: none;
+  }
+  .header {
+    padding: 0;
+  }
+}
 .nav-container {
   transform: translateX(-100%);
+  top: 0;
+  position: absolute;
+}
+.nav-container > .login > .span-1 {
+  margin-right: 10px;
+}
+.nav-container > .login > button {
+  margin-left: 12px;
+  border-radius: 32px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(54, 113, 233);
+  padding: 7px 16px 7px 16px;
 }
 
-.section-1 {
+.dropdown {
+  position: absolute;
+  z-index: 1;
+  transform: translateX(-10%);
+  background-color: rgb(13, 13, 43);
+  width: 100vw;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
+}
+.dropdown > ul > li {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-container {
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+    top: 20px;
+    right: 118px;
+  }
+  .nav-container > .list {
+    display: flex;
+    margin-right: 25px;
+  }
+  .nav-container > .list > li {
+    margin-right: 1rem;
+    opacity: 0.8;
+  }
+  .logo-container {
+    margin-left: 135px;
+  }
+}
+.section-1 {
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 0 1rem 0 1rem;
-}
-
-.save {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgb(255, 255, 255);
-  width: 75vw;
-  border-radius: 8px;
-  height: 32px;
-}
-.save > .percentage {
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-  padding: 4px 12px 4px 4px;
-}
-.save > .black-friday {
-  margin-left: 19px;
 }
 
 .first-div {
@@ -142,22 +199,43 @@ select {
 .first-div > h1 {
   margin-top: 3rem;
 }
-
-.btn {
+.first-div > .btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 32px;
+  padding: 1.5rem;
   height: 2.5rem;
-  width: 9rem;
+  margin-top: 2rem;
+  width: 11rem;
   color: rgb(255, 255, 255);
   background-color: rgb(54, 113, 233);
 }
-.btn > .base {
+.first-div > .btn > .base {
   background-color: rgb(255, 255, 255);
   border-radius: 40%;
 }
 
+@media screen and (min-width: 768px) {
+  .section-1 {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 0 120px 0 120px;
+  }
+  .section-1 .first-div {
+    width: 588px;
+    margin-top: 3rem;
+  }
+  .section-1 .first-div > h1 {
+    font-weight: 700;
+    font-size: 50px;
+  }
+  .section-1 > .second-div {
+    width: 604px;
+    margin-top: 50px;
+  }
+}
 .numbers {
   display: flex;
   justify-content: center;
