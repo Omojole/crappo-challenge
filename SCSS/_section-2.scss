@@ -1,5 +1,5 @@
 .numbers {
-  @include flex(flex,center,center);
+  @include flex(flex, center, center);
   flex-direction: column;
   // text-align: center;
 
@@ -15,81 +15,149 @@
     }
   }
 }
-.choose-crappo{
+.choose-crappo {
   margin-top: 2rem;
-  &>p{
+  & > p {
     margin-top: 1rem;
   }
-  &>button{
+  & > button {
     margin-top: 2rem;
     width: 8rem;
-    padding: 7px;
-    border-radius: 12px;
+    padding: 16px 24px;
+    border-radius: 32px;
     border: none;
     background-color: $tertiary-color;
     color: $clr-white;
   }
 }
-.positioning{
+.positioning {
   bottom: -5%;
   position: absolute;
   background-color: $clr-white;
   width: 90vw;
-    height: 500px;
-    border-radius: 22px;
-    color: $primary-color;
-padding: 1rem;
-&>form{
-margin-bottom: 2rem;
-  margin-top: 5px;
-  display: flex;
-  flex-direction: column;
-  &>input{
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  margin-top: 1rem;
-  }
-  &>select{
-    margin-top: 3rem;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-
-  }
-  &>button{
-    margin-top: 3rem;
-    width: 7rem;
-    padding: 8px;
-    background-color: $tertiary-color;
-     border-radius: 18px;
-    border: none;
-    color: $clr-white
-  }
-}
-&>div{
-  &>.estimation{
-    color: $tertiary-color;
-  }
-  &>h2{
-    font-size: 2rem;
-    margin-top: 1rem;
-    &>.value{
-      color: $tertiary-color;
+  height: 500px;
+  border-radius: 22px;
+  color: $primary-color;
+  padding: 1rem;
+  & > form {
+    margin-bottom: 2rem;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    & > input {
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      margin-top: 1rem;
+      &:focus{
+  outline: none;
+      }
+    }
+    & > select {
+      margin-top: 3rem;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+    }
+    & > button {
+      margin-top: 3rem;
+      width: 7rem;
+      padding: 8px;
+      background-color: $tertiary-color;
+      border-radius: 18px;
+      border: none;
+      color: $clr-white;
     }
   }
-  &>p{
-    opacity: .6;
+  & > div {
+    & > .estimation {
+      color: $tertiary-color;
+    }
+    & > h2 {
+      font-size: 2rem;
+      margin-top: 1rem;
+      & > .value {
+        color: $tertiary-color;
+      }
+    }
+    & > p {
+      opacity: 0.6;
+    }
   }
 }
-  }
-.section-2{
+.section-2 {
   position: relative;
-  // height: 140vh;
-  @include flex(flex,center,center);
+  @include flex(flex, center, center);
   flex-direction: column;
-  padding:0 1rem 30rem 1rem;
-  // &>.bottom{
-  //   margin-bottom: 30rem;
-  // }
+  padding: 0 1rem 30rem 1rem;
+}
+@include query-md {
+  .section-2 {
+    padding: 100px 120px 0px 120px;
+    & > .numbers {
+      flex-direction: row;
+      & > .num_ {
+        width: 334px;
+        margin-left: 99px;
+        & > img {
+          border: none;
+        }
+        & > div {
+
+          & > h2 {
+            @include font(700, 30px);
+          }
+          & > p {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    & >.crappo {
+      width: 1240px;
+      display: flex;
+      flex-direction:row-reverse;
+      justify-content: space-between;
+      margin-top: 140px;
+      &>div{
+width: 480px;
+      &>h2{
+        @include font(700,40px);
+      }
+      &>p{
+        opacity: .8;
+      }
+    }
+    }
+    &>.earnings{
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15rem;
+      margin-top: 6rem;
+      &>h2{
+        @include font(700,30px)
+      }
+      &>p{
+        opacity: .8;
+      }
+    }
+    &>.positioning{
+      bottom: -26%;
+      width: 70vw;
+      padding: 3rem;
+      &>form{
+        margin: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5px;
+        &>input{
+       height: 20px;   
+
+        }
+        &>button,select{
+          margin: 0;
+        }
+      }
+    }
+  }
 }

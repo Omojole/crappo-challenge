@@ -131,8 +131,9 @@ footer {
 }
 .nav-container {
   transform: translateX(-100%);
-  top: 0;
+  top: 100%;
   position: absolute;
+  transition: all 2s;
 }
 .nav-container > .login > .span-1 {
   margin-right: 10px;
@@ -148,11 +149,12 @@ footer {
 .dropdown {
   position: absolute;
   z-index: 1;
-  transform: translateX(-10%);
+  transform: translateX(0%);
   background-color: rgb(13, 13, 43);
+  height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-st;
   align-items: center;
   flex-direction: column;
 }
@@ -218,7 +220,6 @@ footer {
 
 @media screen and (min-width: 768px) {
   .section-1 {
-    padding: 0;
     display: flex;
     flex-direction: row;
     padding: 0 120px 0 120px;
@@ -230,6 +231,9 @@ footer {
   .section-1 .first-div > h1 {
     font-weight: 700;
     font-size: 50px;
+  }
+  .section-1 .first-div > p {
+    opacity: 0.8;
   }
   .section-1 > .second-div {
     width: 604px;
@@ -262,8 +266,8 @@ footer {
 .choose-crappo > button {
   margin-top: 2rem;
   width: 8rem;
-  padding: 7px;
-  border-radius: 12px;
+  padding: 16px 24px;
+  border-radius: 32px;
   border: none;
   background-color: rgb(54, 113, 233);
   color: rgb(255, 255, 255);
@@ -290,6 +294,9 @@ footer {
   border-left: 0;
   border-right: 0;
   margin-top: 1rem;
+}
+.positioning > form > input:focus {
+  outline: none;
 }
 .positioning > form > select {
   margin-top: 3rem;
@@ -329,6 +336,75 @@ footer {
   padding: 0 1rem 30rem 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .section-2 {
+    padding: 100px 120px 0px 120px;
+  }
+  .section-2 > .numbers {
+    flex-direction: row;
+  }
+  .section-2 > .numbers > .num_ {
+    width: 334px;
+    margin-left: 99px;
+  }
+  .section-2 > .numbers > .num_ > img {
+    border: none;
+  }
+  .section-2 > .numbers > .num_ > div > h2 {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .section-2 > .numbers > .num_ > div > p {
+    opacity: 0.8;
+  }
+  .section-2 > .crappo {
+    width: 1240px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 140px;
+  }
+  .section-2 > .crappo > div {
+    width: 480px;
+  }
+  .section-2 > .crappo > div > h2 {
+    font-weight: 700;
+    font-size: 40px;
+  }
+  .section-2 > .crappo > div > p {
+    opacity: 0.8;
+  }
+  .section-2 > .earnings {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15rem;
+    margin-top: 6rem;
+  }
+  .section-2 > .earnings > h2 {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .section-2 > .earnings > p {
+    opacity: 0.8;
+  }
+  .section-2 > .positioning {
+    bottom: -26%;
+    width: 70vw;
+    padding: 3rem;
+  }
+  .section-2 > .positioning > form {
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+  }
+  .section-2 > .positioning > form > input {
+    height: 20px;
+  }
+  .section-2 > .positioning > form > button, .section-2 > .positioning > form select {
+    margin: 0;
+  }
+}
 .crypto {
   border-radius: 17px;
   margin-top: 5rem;
