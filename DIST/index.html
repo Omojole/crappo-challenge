@@ -9,29 +9,31 @@
   </head>
   <body>
     <header class="header">
-      <div class="mobile-nav">
-        <div class="logo-container">
-          <img src="./IMAGE/Logo.png" alt="crappo-logo" />
-          <span>CRAPPO</span>
+      <div class="flex-nav">
+        <div class="mobile-nav">
+          <div class="logo-container">
+            <img src="./IMAGE/Logo.png" alt="crappo-logo" />
+            <span>CRAPPO</span>
+          </div>
+          <div class="now">
+            <i class="fa-solid fa-bars"></i>
+          </div>
         </div>
-        <div class="now">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </div>
 
-      <nav class="nav-container nav-lists">
-        <ul role="list" class="list">
-          <li>Products</li>
-          <li>Features</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-        <div class="login">
-          <span class="span-1">Login</span>
-          <span>|</span>
-          <button type="button">Register</button>
-        </div>
-      </nav>
+        <nav class="nav-container nav-lists">
+          <ul role="list" class="list">
+            <li>Products</li>
+            <li>Features</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+          <div class="login">
+            <span class="span-1">Login</span>
+            <span>|</span>
+            <button type="button">Register</button>
+          </div>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="section-1">
@@ -90,10 +92,10 @@
             <button type="button">Learn More</button>
           </div>
 
-            <img
-              src="./IMAGE/illustrations/Illustration2.png"
-              alt="Illustration2"
-            />
+          <img
+            src="./IMAGE/illustrations/Illustration2.png"
+            alt="Illustration2"
+          />
         </div>
         <div class="earnings">
           <h2>Check how much you can earn</h2>
@@ -130,65 +132,72 @@
       </section>
       <section class="section-3">
         <h2>Trade securely and market the high growth cryptocurrencies.</h2>
-        <div>
-          <div class="crypto crypto1">
+        <div class="crypto-div">
+          <div>
+            <div class="crypto crypto1">
+              <div class="crypto-images">
+                <img src="./IMAGE/icons/icon4.png" alt="bitcoin-icon" />
+                <img
+                  src="./IMAGE/illustrations/Bitcoin.png"
+                  alt="bitcoin-wordings"
+                  class="crypto-label"
+                />
+              </div>
+              <p>
+                Digital currency in which a record of transactions is
+                maintained.
+              </p>
+              <button type="button">
+                Start mining<img
+                  src="./IMAGE/icons/eva_chevron-right-outline.png"
+                  alt="right-arrow"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="crypto crypto2">
             <div class="crypto-images">
-              <img src="./IMAGE/icons/icon4.png" alt="bitcoin-icon" />
+              <img src="./IMAGE/icons/icon5.png" alt="etherium" />
               <img
-                src="./IMAGE/illustrations/Bitcoin.png"
-                alt="bitcoin-wordings"
+                src="./IMAGE/illustrations/Ethereum.png"
+                alt="etherium-wordings"
                 class="crypto-label"
               />
             </div>
             <p>
-              Digital currency in which a record of transactions is maintained.
+              Blockchain technology to create and run decentralized digital
+              applications.
             </p>
             <button type="button">
-              Start mining<img
-                src="./IMAGE/icons/eva_chevron-right-outline.png"
-                alt="right-arrow"
-              />
+              <img src="./IMAGE/icons/arrow-2.png" alt="right-arrow" />
+            </button>
+          </div>
+          <div class="crypto crypto3">
+            <img src="./IMAGE/icons/icon6.png" alt="litecoin" />
+            <img
+              src="./IMAGE/illustrations/Litecoin.png"
+              alt="litecoin-wordings"
+              class="crypto-label"
+            />
+            <p>
+              Cryptocurrency that enables instant payments to anyone in the
+              world.
+            </p>
+            <button type="button">
+              &gt;
+              <!-- <img src="./IMAGE/icons/arrow-2.png" alt="right-arrow" /> -->
             </button>
           </div>
         </div>
-        <div class="crypto crypto2">
-          <div class="crypto-images">
-            <img src="./IMAGE/icons/icon5.png" alt="etherium" />
-            <img
-              src="./IMAGE/illustrations/Ethereum.png"
-              alt="etherium-wordings"
-              class="crypto-label"
-            />
-          </div>
-          <p>
-            Blockchain technology to create and run decentralized digital
-            applications.
-          </p>
-          <button type="button">
-            <img src="./IMAGE/icons/arrow-2.png" alt="right-arrow" />
-          </button>
-        </div>
-        <div class="crypto crypto3">
-          <img src="./IMAGE/icons/icon6.png" alt="litecoin" />
-          <img
-            src="./IMAGE/illustrations/Litecoin.png"
-            alt="litecoin-wordings"
-            class="crypto-label"
-          />
-          <p>
-            Cryptocurrency that enables instant payments to anyone in the world.
-          </p>
-          <button type="button">
-            <img src="./IMAGE/icons/arrow-2.png" alt="right-arrow" />
-          </button>
-        </div>
       </section>
       <section class="section-4">
-        <h2>
-          Market sentiments, portfolio, and run the infrastructure of your
-          choice
-        </h2>
-        <div>
+        <div class="market">
+          <h2>
+            Market sentiments, portfolio, and run the infrastructure of your
+            choice
+          </h2>
+        </div>
+        <div class="invest-div">
           <div class="invest">
             <h3>Invest Smart</h3>
             <p>
@@ -202,19 +211,21 @@
           </div>
         </div>
         <div class="stats">
-          <div class="div1">
-            <h3>Detailed Statistics</h3>
-            <p>
-              View all mining related information in realtime, at any point at
-              any location and decide which polls you want to mine in.
-            </p>
-            <button class="button">Learn More</button>
-          </div>
-          <div class="div2">
-            <img src="./IMAGE/charts/Statistic.png" alt="Statistics" />
+          <div class="first-set">
+            <div class="div1">
+              <h3>Detailed Statistics</h3>
+              <p>
+                View all mining related information in realtime, at any point at
+                any location and decide which polls you want to mine in.
+              </p>
+              <button class="button">Learn More</button>
+            </div>
+            <div class="div2">
+              <img src="./IMAGE/charts/Statistic.png" alt="Statistics" />
+            </div>
           </div>
           <div class="div3">
-            <div>
+            <div class="text">
               <h3>Grow your profit and track your investments</h3>
               <p class="analysis">
                 Use advanced analytical tools. Clear TradingView charts let you

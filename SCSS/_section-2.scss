@@ -44,16 +44,23 @@
     margin-top: 5px;
     display: flex;
     flex-direction: column;
+
     & > input {
       border-top: 0;
       border-left: 0;
       border-right: 0;
       margin-top: 1rem;
+      font-size: 20px;
       &:focus{
   outline: none;
       }
+      &::placeholder{
+        color: $primary-color;
+      }
+  
     }
     & > select {
+      font-size: 20px;
       margin-top: 3rem;
       border-top: 0;
       border-left: 0;
@@ -61,22 +68,25 @@
     }
     & > button {
       margin-top: 3rem;
-      width: 7rem;
-      padding: 8px;
+      width: 6rem;
+      padding: 16px;
       background-color: $tertiary-color;
-      border-radius: 18px;
+      border-radius: 32px;
       border: none;
       color: $clr-white;
+      @include font(500,18px);
     }
   }
-  & > div {
-    & > .estimation {
+   div {
+    .estimation {
       color: $tertiary-color;
+      @include font(500,16px)
     }
-    & > h2 {
-      font-size: 2rem;
+     h2 {
+      font-size: 32px;
       margin-top: 1rem;
-      & > .value {
+      .value {
+        font-size: 32px;
         color: $tertiary-color;
       }
     }
@@ -142,9 +152,10 @@ width: 480px;
       }
     }
     &>.positioning{
-      bottom: -26%;
+      bottom: -10%;
       width: 70vw;
       padding: 3rem;
+      height: 300px;
       &>form{
         margin: 0;
         flex-direction: row;
@@ -159,5 +170,6 @@ width: 480px;
         }
       }
     }
+
   }
 }

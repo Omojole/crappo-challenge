@@ -93,17 +93,18 @@ $section-3: rgb(242, 242, 242);
 header,
 .section-1,
 .section-2,
-.section-4,
 footer {
-  background-color: $primary-color;
+  background: linear-gradient($secondary-color,$primary-color);
   color: $clr-white;
 }
 .section-3 {
   background-color: $section-3;
 }
-
+.section-4{
+  background-color: $secondary-color;
+}
 @mixin query-md {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 992px) {
     @content;
   }
 }

@@ -1,9 +1,9 @@
 .header {
   height: 80px;
-  padding: 20px 1rem 0 1rem;
-  position: relative;
-  display: flex;
-  align-items: center;
+  .flex-nav{
+    padding: 20px 0 1rem 0;
+    position: relative;
+  }
 }
 .mobile-nav {
   @include flex(flex, space-between, center);
@@ -11,10 +11,12 @@
   width: 100%;
 }
 .logo-container {
+  margin-left: 1rem;
   width: 120px;
   @include flex(flex, space-between, center);
 }
 .now {
+  margin-right: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -22,7 +24,20 @@
   .now {
     display: none;
   }
+  .logo-container {
+margin: 0;
+  }
   .header{
-    padding: 0;
+    // padding: 0;
+    display: flex;
+    justify-content: center;
+    .flex-nav{
+      position: initial;
+      display: flex;
+      justify-content: space-between;
+      width: 1120px;
+      // padding: 0 120px;
+
+    }
   }
 }
