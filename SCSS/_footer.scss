@@ -1,67 +1,134 @@
 footer {
   padding: 12rem 14px 14px 0;
-  @include flex(flex,center,center);
+  @include flex(flex, center, center);
   flex-direction: column;
-  & > .mine {
+  .mine {
     background-color: $tertiary-color;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 20px;
-    // height: 12rem;
-    // text-align: center;
+    color: $clr-white;
     padding: 1rem;
-    // align-items:flex-start;
-    & > p {
-      margin-top: 1rem;
+    div {
+      width: 100%;
+      text-align: center;
+      p {
+        opacity: 0.8;
+        margin-top: 1rem;
+      }
+      h3 {
+        @include font(700, 32px);
+      }
     }
-    & > form {
-      & > input {
-        &::placeholder {
-          color: $clr-white;
-        }
-        background-color: $tertiary-color;
+
+    form {
+      input {
         border-top: 0;
         border-left: 0;
         border-right: 0;
-        border-bottom: 1px solid $clr-white;
+        background-color: $tertiary-color;
+        border-bottom: 1px solid rgb(155, 152, 152);
         margin-bottom: 0.7rem;
-      }
-      & > div {
-        width: 100%;
-        text-align: center;
-        & > button {
-          padding: 0.6rem;
-          border-radius: 1rem;
-          border: none;
-          margin-bottom: 12px;
+
+        &::placeholder {
+          color: $clr-white;
         }
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        @include font(900, 18px);
+        color: $primary-color;
+        padding: 14px 32px;
+        border-radius: 32px;
+        border: none;
+        margin-bottom: 12px;
       }
     }
   }
   .links {
-    @include flex(flex,center,center);
+    @include flex(flex, flex-start, center);
     flex-direction: column;
     margin-top: 4rem;
-    &>div:first-child{
+    & > div:first-child {
+      color: $clr-white;
       text-align: center;
-      @include flex(flex,center,center);
+      @include flex(flex, center, center);
       margin-bottom: 3rem;
     }
-    &>div{
+    div {
       margin: 1rem 0 2rem 0;
-    &>.payment{
-      display: flex;
-      margin-top: 1rem;
+      h4 {
+        color: $clr-white;
+      }
+      .payment {
+        display: flex;
+        margin-top: 1rem;
+      }
+    }
+    ul {
+      text-align: center;
+      width: 12rem;
+      color: $clr-white;
+      li {
+        margin-top: 1rem;
+        opacity: 0.8;
+        a {
+          color: $clr-white;
+          text-decoration: none;
+        }
+      }
     }
   }
-  &>ul>li>a{
-color: $clr-white;
-text-decoration: none;
+  .copyright {
+    color: $clr-white;
+    .social-icons {
+      margin-right: 1rem;
+    }
   }
 }
-&>div>i{
-  margin-left: 12px;
+@include query-md {
+  footer {
+    padding: 12rem 120px 14px 120px;
+
+    .mine {
+      padding: 2rem;
+      width: 75vw;
+      height: 216px;
+      border-radius: 16px;
+      @include flex(flex, space-between, center);
+      div {
+        width: 348px;
+        text-align: left;
+      }
+      form {
+        width: 30rem;
+        @include flex(flex, space-between, center);
+        input {
+          width: 18rem;
+        }
+      }
+    }
+    .links {
+      margin-bottom: 2rem;
+      width: 100%;
+      display: grid;
+      align-items: flex-start;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      ul{
+        text-align: left;
+      }
+      div.payment {
+        img {
+          object-fit: contain;
+          margin-right: 1rem;
+        }
+      }
+    }
+    .copyright {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
 }
-}
-// @include query-md{
-  
-// }

@@ -1,76 +1,86 @@
-.crypto {
-  border-radius: 16px;
-  margin-top: 5rem;
-  background-color: $secondary-color;
-  padding: 3rem;
-  @include flex(flex, center, center);
-  flex-direction: column;
-  color: $clr-white;
-  & > .crypto-images {
-    @include flex(flex, center, center);
-flex-direction: column;
-    width: 100%;
-    margin: auto;
-    & > .crypto-label {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-    }
-  }
-  & > button {
-    @include flex(flex, center, center);
-    margin-top: 1rem;
-    padding: 16px;
-    border: none;
-    border-radius: 32px;
-    width: 170px;
-    color: $clr-white;
-    background-color: $tertiary-color;
-    & > img {
-      padding: 5px;
-      margin-left: 17px;
-      background-color: $clr-white;
-      border-radius: 50%;
-    }
-  }
-}
-.crypto2,.crypto3 {
-  background-color: $clr-white;
-  color: $primary-color;
-  &>button{
-    border: 1px solid grey;
-    // width: 60px;
-    // border-radius: 50%;
-    // font-weight: bolder;
-    // font-size: 40px;
-    color: $secondary-color;
-    background-color: $clr-white;
-    // img{
-    //   border: 2px solid red;
-    // }
-  }
-}
-.section-3 {
-  padding:6rem 1rem  0 1rem;
-  & > button {
-    color: $clr-white;
-  }
-}
-
-@include query-md{
-.section-3{
-  padding: 12rem 120px 5rem 120px;
-  text-align: center;
-
-&>h2{
-  @include font(700,40px)
-}
-.crypto-div{
+.crypto-div {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  .crypto{
+  flex-direction: column;
+  align-items: center;
+  .crypto {
     width: 320px;
     height: 433px;
+
+    border-radius: 16px;
+    margin: 2.5rem 0;
+    background-color: $secondary-color;
+    padding: 3rem;
+    @include flex(flex, center, center);
+    flex-direction: column;
+    color: $clr-white;
+    & > .crypto-images {
+      @include flex(flex, center, center);
+      flex-direction: column;
+      width: 100%;
+      margin: auto;
+      & > .crypto-label {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+    & > button {
+      @include flex(flex, center, center);
+      margin-top: 1rem;
+      padding: 16px;
+      border: none;
+      border-radius: 32px;
+      width: 170px;
+      color: $clr-white;
+      background-color: $tertiary-color;
+      & > img {
+        padding: 5px;
+        background-color: $clr-white;
+        border-radius: 50%;
+      }
+    }
+  }
+
+
+  .crypto2,
+  .crypto3 {
+    background-color: $clr-white;
+    color: $primary-color;
+    & > button {
+      border: 1px solid grey;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      color: $secondary-color;
+      background-color: $clr-white;
+      img {
+        position: absolute;
+        right: 25%;
+      }
+    }
   }
 }
+
+.section-3 {
+  padding: 6rem 1rem 0 1rem;
+  & > button {
+    color: $clr-white;
+  }
 }
+
+@include query-md {
+  .section-3 {
+    padding: 12rem 120px 5rem 120px;
+    text-align: center;
+
+    & > h2 {
+      @include font(700, 40px);
+    }
+    .crypto-div {
+      justify-content: space-around;
+    }
+  }
 }

@@ -82,9 +82,8 @@ select {
 }
 header,
 .section-1,
-.section-2,
-footer {
-  background: linear-gradient(rgb(43, 7, 110), rgb(13, 13, 43));
+.section-2 {
+  background-color: rgb(13, 13, 43);
   color: rgb(255, 255, 255);
 }
 
@@ -94,6 +93,10 @@ footer {
 
 .section-4 {
   background-color: rgb(43, 7, 110);
+}
+
+footer {
+  background: linear-gradient(rgb(43, 7, 110), 30%, rgb(13, 13, 43));
 }
 
 .header {
@@ -172,8 +175,20 @@ footer {
   align-items: center;
   flex-direction: column;
 }
-.dropdown > ul > li {
+.dropdown ul > li {
+  font-size: 22px;
   margin-top: 2rem;
+}
+.dropdown .login {
+  font-size: 22px;
+}
+
+.bars {
+  visibility: hidden;
+}
+
+.x-mark {
+  visibility: hidden;
 }
 
 @media screen and (min-width: 992px) {
@@ -432,9 +447,17 @@ footer {
     margin: 0;
   }
 }
-.crypto {
+.crypto-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.crypto-div .crypto {
+  width: 320px;
+  height: 433px;
   border-radius: 16px;
-  margin-top: 5rem;
+  margin: 2.5rem 0;
   background-color: rgb(43, 7, 110);
   padding: 3rem;
   display: flex;
@@ -443,7 +466,7 @@ footer {
   flex-direction: column;
   color: rgb(255, 255, 255);
 }
-.crypto > .crypto-images {
+.crypto-div .crypto > .crypto-images {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -451,11 +474,11 @@ footer {
   width: 100%;
   margin: auto;
 }
-.crypto > .crypto-images > .crypto-label {
+.crypto-div .crypto > .crypto-images > .crypto-label {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.crypto > button {
+.crypto-div .crypto > button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -467,21 +490,32 @@ footer {
   color: rgb(255, 255, 255);
   background-color: rgb(54, 113, 233);
 }
-.crypto > button > img {
+.crypto-div .crypto > button > img {
   padding: 5px;
-  margin-left: 17px;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
 }
-
-.crypto2, .crypto3 {
+.crypto-div .crypto2,
+.crypto-div .crypto3 {
   background-color: rgb(255, 255, 255);
   color: rgb(13, 13, 43);
 }
-.crypto2 > button, .crypto3 > button {
+.crypto-div .crypto2 > button,
+.crypto-div .crypto3 > button {
   border: 1px solid grey;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   color: rgb(43, 7, 110);
   background-color: rgb(255, 255, 255);
+}
+.crypto-div .crypto2 > button img,
+.crypto-div .crypto3 > button img {
+  position: absolute;
+  right: 25%;
 }
 
 .section-3 {
@@ -501,12 +535,7 @@ footer {
     font-size: 40px;
   }
   .section-3 .crypto-div {
-    display: flex;
     justify-content: space-around;
-  }
-  .section-3 .crypto-div .crypto {
-    width: 320px;
-    height: 433px;
   }
 }
 .section-4 {
@@ -579,7 +608,7 @@ footer {
 
 @media screen and (min-width: 992px) {
   .section-4 {
-    padding: 0 1rem 0 1rem;
+    padding: 3rem 120px 0 120px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -639,67 +668,143 @@ footer {
   align-items: center;
   flex-direction: column;
 }
-footer > .mine {
+footer .mine {
   background-color: rgb(54, 113, 233);
   border-top-left-radius: 12px;
   border-bottom-left-radius: 20px;
+  color: rgb(255, 255, 255);
   padding: 1rem;
 }
-footer > .mine > p {
-  margin-top: 1rem;
-}
-footer > .mine > form > input {
-  background-color: rgb(54, 113, 233);
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 1px solid rgb(255, 255, 255);
-  margin-bottom: 0.7rem;
-}
-footer > .mine > form > input::-moz-placeholder {
-  color: rgb(255, 255, 255);
-}
-footer > .mine > form > input:-ms-input-placeholder {
-  color: rgb(255, 255, 255);
-}
-footer > .mine > form > input::placeholder {
-  color: rgb(255, 255, 255);
-}
-footer > .mine > form > div {
+footer .mine div {
   width: 100%;
   text-align: center;
 }
-footer > .mine > form > div > button {
-  padding: 0.6rem;
-  border-radius: 1rem;
+footer .mine div p {
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+footer .mine div h3 {
+  font-weight: 700;
+  font-size: 32px;
+}
+footer .mine form input {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background-color: rgb(54, 113, 233);
+  border-bottom: 1px solid rgb(155, 152, 152);
+  margin-bottom: 0.7rem;
+}
+footer .mine form input::-moz-placeholder {
+  color: rgb(255, 255, 255);
+}
+footer .mine form input:-ms-input-placeholder {
+  color: rgb(255, 255, 255);
+}
+footer .mine form input::placeholder {
+  color: rgb(255, 255, 255);
+}
+footer .mine form input:focus {
+  outline: none;
+}
+footer .mine form button {
+  font-weight: 900;
+  font-size: 18px;
+  color: rgb(13, 13, 43);
+  padding: 14px 32px;
+  border-radius: 32px;
   border: none;
   margin-bottom: 12px;
 }
 footer .links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   margin-top: 4rem;
 }
 footer .links > div:first-child {
+  color: rgb(255, 255, 255);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
 }
-footer .links > div {
+footer .links div {
   margin: 1rem 0 2rem 0;
 }
-footer .links > div > .payment {
+footer .links div h4 {
+  color: rgb(255, 255, 255);
+}
+footer .links div .payment {
   display: flex;
   margin-top: 1rem;
 }
-footer .links > ul > li > a {
+footer .links ul {
+  text-align: center;
+  width: 12rem;
+  color: rgb(255, 255, 255);
+}
+footer .links ul li {
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+footer .links ul li a {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
-footer > div > i {
-  margin-left: 12px;
+footer .copyright {
+  color: rgb(255, 255, 255);
+}
+footer .copyright .social-icons {
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    padding: 12rem 120px 14px 120px;
+  }
+  footer .mine {
+    padding: 2rem;
+    width: 75vw;
+    height: 216px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .mine div {
+    width: 348px;
+    text-align: left;
+  }
+  footer .mine form {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .mine form input {
+    width: 18rem;
+  }
+  footer .links {
+    margin-bottom: 2rem;
+    width: 100%;
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  footer .links ul {
+    text-align: left;
+  }
+  footer .links div.payment img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin-right: 1rem;
+  }
+  footer .copyright {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

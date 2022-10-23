@@ -1,7 +1,6 @@
 .numbers {
   @include flex(flex, center, center);
   flex-direction: column;
-  // text-align: center;
 
   & > .num_ {
     width: 16rem;
