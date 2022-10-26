@@ -25,7 +25,7 @@
       }
     }
     & > button {
-      @include flex(flex, center, center);
+      @include flex(flex, space-between, center);
       margin-top: 1rem;
       padding: 16px;
       border: none;
@@ -46,7 +46,7 @@
   .crypto3 {
     background-color: $clr-white;
     color: $primary-color;
-    & > button {
+    button {
       border: 1px solid grey;
       display: flex;
       position: relative;
@@ -59,6 +59,8 @@
       img {
         position: absolute;
         right: 25%;
+  
+  
       }
     }
   }

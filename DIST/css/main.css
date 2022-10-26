@@ -56,6 +56,10 @@ picture {
   display: block;
 }
 
+button:hover {
+  transform: scale(1.1);
+}
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -124,6 +128,7 @@ footer {
 }
 
 .now {
+  position: relative;
   margin-right: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -152,10 +157,10 @@ footer {
   position: absolute;
   transition: all 2s;
 }
-.nav-container > .login > .span-1 {
+.nav-container .login .span-1 {
   margin-right: 10px;
 }
-.nav-container > .login > button {
+.nav-container .login button {
   margin-left: 12px;
   border-radius: 32px;
   color: rgb(255, 255, 255);
@@ -179,8 +184,21 @@ footer {
   font-size: 22px;
   margin-top: 2rem;
 }
+.dropdown ul > li:hover {
+  color: rgb(54, 113, 233);
+  cursor: pointer;
+}
 .dropdown .login {
   font-size: 22px;
+}
+.dropdown .login:hover {
+  cursor: pointer;
+}
+.dropdown .login:hover .span-1:hover {
+  color: rgb(54, 113, 233);
+}
+.dropdown .login:hover button {
+  color: rgb(13, 13, 43);
 }
 
 .bars {
@@ -189,6 +207,9 @@ footer {
 
 .x-mark {
   visibility: hidden;
+  position: absolute;
+  top: 5%;
+  left: 0;
 }
 
 @media screen and (min-width: 992px) {
@@ -274,7 +295,10 @@ footer {
 .numbers > .num_ {
   width: 16rem;
   display: flex;
-  margin-top: 12px;
+  margin-top: 20px;
+}
+.numbers > .num_:hover {
+  cursor: pointer;
 }
 .numbers > .num_ > img {
   border: 1px solid;
@@ -480,7 +504,7 @@ footer {
 }
 .crypto-div .crypto > button {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
   padding: 16px;
@@ -500,8 +524,8 @@ footer {
   background-color: rgb(255, 255, 255);
   color: rgb(13, 13, 43);
 }
-.crypto-div .crypto2 > button,
-.crypto-div .crypto3 > button {
+.crypto-div .crypto2 button,
+.crypto-div .crypto3 button {
   border: 1px solid grey;
   display: flex;
   position: relative;
@@ -512,8 +536,8 @@ footer {
   color: rgb(43, 7, 110);
   background-color: rgb(255, 255, 255);
 }
-.crypto-div .crypto2 > button img,
-.crypto-div .crypto3 > button img {
+.crypto-div .crypto2 button img,
+.crypto-div .crypto3 button img {
   position: absolute;
   right: 25%;
 }
@@ -559,6 +583,7 @@ footer {
   font-weight: 500;
   font-size: 18px;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 16px 32px;
   border: none;
   border-radius: 32px;
@@ -573,6 +598,7 @@ footer {
 }
 .section-4 > .stats .first-set .div1 button {
   border: none;
+  margin-top: 1rem;
   background-color: rgb(54, 113, 233);
   color: rgb(255, 255, 255);
   padding: 16px 32px;
@@ -687,6 +713,11 @@ footer .mine div h3 {
   font-weight: 700;
   font-size: 32px;
 }
+footer .mine form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 footer .mine form input {
   border-top: 0;
   border-left: 0;
@@ -754,6 +785,9 @@ footer .links ul li a {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
+footer .links ul li a:hover {
+  color: rgb(54, 113, 233);
+}
 footer .copyright {
   color: rgb(255, 255, 255);
 }
@@ -780,9 +814,6 @@ footer .copyright .social-icons {
   }
   footer .mine form {
     width: 30rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   footer .mine form input {
     width: 18rem;

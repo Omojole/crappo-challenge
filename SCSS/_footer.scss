@@ -21,6 +21,7 @@ footer {
     }
 
     form {
+      @include flex(flex,space-between,center);
       input {
         border-top: 0;
         border-left: 0;
@@ -66,16 +67,21 @@ footer {
         margin-top: 1rem;
       }
     }
-    ul {
+    ul{
       text-align: center;
       width: 12rem;
       color: $clr-white;
       li {
         margin-top: 1rem;
         opacity: 0.8;
+          
         a {
           color: $clr-white;
           text-decoration: none;
+          &:hover{
+            color: $tertiary-color;
+          }
+  
         }
       }
     }
@@ -103,7 +109,6 @@ footer {
       }
       form {
         width: 30rem;
-        @include flex(flex, space-between, center);
         input {
           width: 18rem;
         }

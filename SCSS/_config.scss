@@ -52,6 +52,9 @@ picture {
   display: block;
 }
 
+button:hover{
+transform: scale(1.1);
+}
 /* Inherit fonts for inputs and buttons */
 input,
 button,

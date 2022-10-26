@@ -5,7 +5,10 @@
   & > .num_ {
     width: 16rem;
     display: flex;
-    margin-top: 12px;
+    margin-top: 20px;
+    &:hover{
+      cursor: pointer;
+    }
     & > img {
       // background-color: #FFFFFF1A;
       border: 1px solid;

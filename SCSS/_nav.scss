@@ -1,13 +1,12 @@
 .nav-container {
   transform: translateX(-100%);
-  // top: 100%;
   position: absolute;
   transition: all 2s;
-  & > .login {
-    & > .span-1 {
+  .login {
+   .span-1 {
       margin-right: 10px;
     }
-    & > button {
+    button {
       margin-left: 12px;
       border-radius: 32px;
       color: $clr-white;
@@ -28,32 +27,42 @@
   ul > li {
     font-size: 22px;
     margin-top: 2rem;
+    &:hover{
+      color: $tertiary-color;
+      cursor:pointer;
+    }
   }
   .login {
     font-size: 22px;
+    &:hover{
+      cursor: pointer;
+      .span-1{
+        &:hover{
+          color: $tertiary-color;
+        }
+      }
+      button{
+// transform: scaleX(1.2);
+color: $primary-color;
+      }
+    }
   }
 }
-// .fa-xmark:before {
-//   content: "";
-// }
 .bars{
   visibility: hidden;
 }
 .x-mark{
   visibility: hidden;
+  position: absolute;
+  top: 5%;
+  left: 0;
 }
 @include query-md {
   .nav-container {
     transform: translateX(0);
     position: initial;
-    // width: auto;
-    // height: auto;
-    // z-index: 1;
     display: flex;
     align-items: center;
-    // transform: translateX(0);
-    // top: 20px;
-    // right: 118px;
     & > .list {
       display: flex;
       margin-right: 25px;
