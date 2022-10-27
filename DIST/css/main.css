@@ -1,6 +1,5 @@
-/* Imported URL for fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 /* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 *,
 *::before,
 *::after {
@@ -57,11 +56,6 @@ picture {
   display: block;
 }
 
-/* buttons on hover*/
-button:hover {
-  transform: scale(1.1);
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -86,7 +80,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-/* Queries*/
 header,
 .section-1,
 .section-2 {
@@ -113,89 +106,37 @@ footer {
   padding: 20px 0 1rem 0;
   position: relative;
 }
-.header .flex-nav .mobile-nav {
+
+.mobile-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   width: 100%;
 }
-.header .flex-nav .mobile-nav .logo-container {
+
+.logo-container {
   margin-left: 1rem;
   width: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .flex-nav .mobile-nav .now {
-  position: relative;
+
+.now {
   margin-right: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
 }
-.header .flex-nav .mobile-nav .now .bars {
-  visibility: hidden;
-}
-.header .flex-nav .mobile-nav .now .x-mark {
-  visibility: hidden;
-  position: absolute;
-  top: 5%;
-  left: 0;
-}
-.header .flex-nav .nav-container {
-  transform: translateX(-100%);
-  position: absolute;
-  transition: all 2s;
-}
-.header .flex-nav .nav-container .login .span-1 {
-  margin-right: 10px;
-}
-.header .flex-nav .nav-container .login button {
-  margin-left: 12px;
-  border-radius: 32px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(54, 113, 233);
-  padding: 7px 16px 7px 16px;
-}
-.header .flex-nav .nav-container.dropdown {
-  position: absolute;
-  z-index: 1;
-  transform: translateX(-5%);
-  background-color: rgb(13, 13, 43);
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-.header .flex-nav .nav-container.dropdown ul > li {
-  font-size: 22px;
-  margin-top: 2rem;
-}
-.header .flex-nav .nav-container.dropdown ul > li:hover {
-  color: rgb(54, 113, 233);
-  cursor: pointer;
-}
-.header .flex-nav .nav-container.dropdown .login {
-  font-size: 22px;
-}
-.header .flex-nav .nav-container.dropdown .login:hover {
-  cursor: pointer;
-}
-.header .flex-nav .nav-container.dropdown .login .span-1:hover {
-  color: rgb(54, 113, 233);
-}
-.header .flex-nav .nav-container.dropdown .login button {
-  color: rgb(13, 13, 43);
-}
-.header .flex-nav .nav-container.dropdown .login button:hover {
-  color: rgb(255, 255, 255);
-}
 
 @media screen and (min-width: 992px) {
+  .now {
+    display: none;
+  }
+  .logo-container {
+    margin: 0;
+  }
   .header {
-    padding: 0 90px;
     display: flex;
     justify-content: center;
   }
@@ -204,30 +145,6 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 1120px;
-  }
-  .header .flex-nav .mobile-nav .logo-container {
-    margin: 0;
-  }
-  .header .flex-nav .mobile-nav .now {
-    display: none;
-  }
-  .header .flex-nav .nav-container {
-    transform: translateX(0);
-    position: initial;
-    display: flex;
-    align-items: center;
-  }
-  .header .flex-nav .nav-container .list {
-    display: flex;
-    margin-right: 25px;
-  }
-  .header .flex-nav .nav-container .list li {
-    margin-right: 1rem;
-    opacity: 0.8;
-  }
-  .header .flex-nav .nav-container .login {
-    display: flex;
-    align-items: center;
   }
 }
 .section-1 {
@@ -238,13 +155,14 @@ footer {
   flex-direction: column;
   padding: 0 1rem 0 1rem;
 }
-.section-1 .first-div {
+
+.first-div {
   margin-top: 1rem;
 }
-.section-1 .first-div h1 {
+.first-div > h1 {
   margin-top: 3rem;
 }
-.section-1 .first-div .btn {
+.first-div > .btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -256,7 +174,7 @@ footer {
   color: rgb(255, 255, 255);
   background-color: rgb(54, 113, 233);
 }
-.section-1 .first-div .btn .base {
+.first-div > .btn > .base {
   background-color: rgb(255, 255, 255);
   border-radius: 40%;
 }
@@ -265,20 +183,20 @@ footer {
   .section-1 {
     display: flex;
     flex-direction: row;
-    padding: 0 90px;
+    padding: 0 70px;
   }
   .section-1 .first-div {
     width: 588px;
     margin-top: 3rem;
   }
-  .section-1 .first-div h1 {
+  .section-1 .first-div > h1 {
     font-weight: 700;
     font-size: 50px;
   }
-  .section-1 .first-div p {
+  .section-1 .first-div > p {
     opacity: 0.8;
   }
-  .section-1 .second-div {
+  .section-1 > .second-div {
     width: 604px;
     margin-top: 50px;
   }
@@ -291,32 +209,34 @@ footer {
   flex-direction: column;
   padding: 0 1rem 30rem 1rem;
 }
-.section-2 .numbers {
+
+.numbers {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.section-2 .numbers .num_ {
+.numbers > .num_ {
   width: 16rem;
   display: flex;
   margin-top: 20px;
 }
-.section-2 .numbers .num_:hover {
+.numbers > .num_:hover {
   cursor: pointer;
 }
-.section-2 .numbers .num_ img {
+.numbers > .num_ > img {
   border: 1px solid;
   border-radius: 50%;
   margin-right: 1.5rem;
 }
-.section-2 .crappo .choose-crappo {
+
+.choose-crappo {
   margin-top: 2rem;
 }
-.section-2 .crappo .choose-crappo > p {
+.choose-crappo > p {
   margin-top: 1rem;
 }
-.section-2 .crappo .choose-crappo > button {
+.choose-crappo > button {
   margin-top: 2rem;
   width: 8rem;
   padding: 16px 24px;
@@ -325,7 +245,8 @@ footer {
   background-color: rgb(54, 113, 233);
   color: rgb(255, 255, 255);
 }
-.section-2 .positioning {
+
+.positioning {
   bottom: -5%;
   position: absolute;
   background-color: rgb(255, 255, 255);
@@ -335,39 +256,39 @@ footer {
   color: rgb(13, 13, 43);
   padding: 1rem;
 }
-.section-2 .positioning form {
+.positioning > form {
   margin-bottom: 2rem;
   margin-top: 5px;
   display: flex;
   flex-direction: column;
 }
-.section-2 .positioning form input {
+.positioning > form > input {
   border-top: 0;
   border-left: 0;
   border-right: 0;
   margin-top: 1rem;
   font-size: 20px;
 }
-.section-2 .positioning form input:focus {
+.positioning > form > input:focus {
   outline: none;
 }
-.section-2 .positioning form input::-moz-placeholder {
+.positioning > form > input::-moz-placeholder {
   color: rgb(13, 13, 43);
 }
-.section-2 .positioning form input:-ms-input-placeholder {
+.positioning > form > input:-ms-input-placeholder {
   color: rgb(13, 13, 43);
 }
-.section-2 .positioning form input::placeholder {
+.positioning > form > input::placeholder {
   color: rgb(13, 13, 43);
 }
-.section-2 .positioning form select {
+.positioning > form > select {
   font-size: 20px;
   margin-top: 3rem;
   border-top: 0;
   border-left: 0;
   border-right: 0;
 }
-.section-2 .positioning form button {
+.positioning > form > button {
   margin-top: 3rem;
   width: 6rem;
   padding: 16px;
@@ -378,93 +299,98 @@ footer {
   font-weight: 500;
   font-size: 18px;
 }
-.section-2 .positioning div .estimation {
+.positioning div .estimation {
   color: rgb(54, 113, 233);
   font-weight: 500;
   font-size: 16px;
 }
-.section-2 .positioning div h2 {
+.positioning div h2 {
   font-size: 32px;
   margin-top: 1rem;
 }
-.section-2 .positioning div h2 .value {
+.positioning div h2 .value {
   font-size: 32px;
   color: rgb(54, 113, 233);
 }
-.section-2 .positioning div p {
+.positioning div > p {
   opacity: 0.6;
 }
 
 @media screen and (min-width: 992px) {
   .section-2 {
-    padding: 100px 120px 0px 120px;
+    padding: 100px 70px 0px;
   }
-  .section-2 .numbers {
+  .section-2 > .numbers {
     flex-direction: row;
   }
-  .section-2 .numbers .num_ {
-    width: 310px;
-  }
-  .section-2 .numbers .num_ img {
+  .section-2 > .numbers > .num_ > img {
     border: none;
   }
-  .section-2 .numbers .num_ div h2 {
+  .section-2 > .numbers > .num_ > div > h2 {
     font-weight: 700;
     font-size: 30px;
   }
-  .section-2 .numbers .num_ div p {
+  .section-2 > .numbers > .num_ > div > p {
     opacity: 0.8;
   }
-  .section-2 .crappo {
-    width: 90vw;
+  .section-2 > .crappo {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-top: 140px;
   }
-  .section-2 .crappo div {
+  .section-2 > .crappo .choose-crappo {
     width: 480px;
   }
-  .section-2 .crappo div h2 {
+  .section-2 > .crappo .choose-crappo > h2 {
     font-weight: 700;
     font-size: 40px;
   }
-  .section-2 .crappo div p {
+  .section-2 > .crappo .choose-crappo > p {
     opacity: 0.8;
   }
-  .section-2 .earnings {
+  .section-2 > .crappo img {
+    width: 60%;
+  }
+  .section-2 > .earnings {
     width: 100%;
     text-align: center;
     margin-bottom: 15rem;
     margin-top: 6rem;
   }
-  .section-2 .earnings h2 {
+  .section-2 > .earnings > h2 {
     font-weight: 700;
     font-size: 30px;
   }
-  .section-2 .earnings p {
+  .section-2 > .earnings > p {
     opacity: 0.8;
   }
-  .section-2 .positioning {
+  .section-2 > .positioning {
     bottom: -10%;
     width: 70vw;
     padding: 3rem;
     height: 300px;
   }
-  .section-2 .positioning form {
+  .section-2 > .positioning > form {
     margin: 0;
     flex-direction: row;
     justify-content: space-around;
     padding: 5px;
   }
-  .section-2 .positioning form input {
+  .section-2 > .positioning > form > input {
     height: 20px;
   }
-  .section-2 .positioning form button,
-.section-2 .positioning form select {
+  .section-2 > .positioning > form > button, .section-2 > .positioning > form select {
     margin: 0;
   }
 }
+.section-3 {
+  padding: 6rem 1rem 0 1rem;
+}
+.section-3 > button {
+  color: rgb(255, 255, 255);
+}
+
 .crypto-div {
   width: 100%;
   display: flex;
@@ -536,16 +462,9 @@ footer {
   right: 25%;
 }
 
-.section-3 {
-  padding: 6rem 1rem 0 1rem;
-}
-.section-3 > button {
-  color: rgb(255, 255, 255);
-}
-
 @media screen and (min-width: 992px) {
   .section-3 {
-    padding: 12rem 10px 5rem;
+    padding: 12rem 0 5rem;
     text-align: center;
   }
   .section-3 > h2 {
@@ -553,8 +472,8 @@ footer {
     font-size: 40px;
   }
   .section-3 .crypto-div {
-    justify-content: space-around;
     flex-direction: row;
+    justify-content: space-around;
   }
 }
 .section-4 {
@@ -566,15 +485,15 @@ footer {
   font-size: 40px;
   margin-bottom: 5rem;
 }
-.section-4 div > .invest h3 {
+.section-4 > div > .invest h3 {
   font-weight: 700;
   font-size: 32px;
   margin-bottom: 1.5rem;
 }
-.section-4 div > .invest p {
+.section-4 > div > .invest p {
   opacity: 0.8;
 }
-.section-4 div > .invest button {
+.section-4 > div > .invest > button {
   font-weight: 500;
   font-size: 18px;
   margin-top: 1rem;
@@ -585,13 +504,13 @@ footer {
   color: rgb(255, 255, 255);
   background-color: rgb(54, 113, 233);
 }
-.section-4 .stats {
+.section-4 > .stats {
   margin-top: 5rem;
 }
-.section-4 .stats .first-set .div1 p {
+.section-4 > .stats .first-set .div1 p {
   opacity: 0.8;
 }
-.section-4 .stats .first-set .div1 button {
+.section-4 > .stats .first-set .div1 button {
   border: none;
   margin-top: 1rem;
   background-color: rgb(54, 113, 233);
@@ -601,22 +520,22 @@ footer {
   font-weight: 500;
   font-size: 18px;
 }
-.section-4 .stats .first-set .div2 {
+.section-4 > .stats .first-set .div2 {
   margin-top: 2rem;
 }
-.section-4 .stats .div3 {
+.section-4 > .stats .div3 {
   margin-top: 7rem;
 }
-.section-4 .stats .div3 div h3 {
+.section-4 > .stats .div3 > div h3 {
   font-weight: 700;
   font-size: 32px;
 }
-.section-4 .stats .div3 div .analysis {
+.section-4 > .stats .div3 > div > .analysis {
   opacity: 0.8;
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
-.section-4 .stats .div3 div button {
+.section-4 > .stats .div3 > div > button {
   border: none;
   background-color: rgb(54, 113, 233);
   color: rgb(255, 255, 255);
@@ -629,21 +548,24 @@ footer {
 
 @media screen and (min-width: 992px) {
   .section-4 {
-    padding: 3rem 120px 0 120px;
+    padding: 3rem 70px 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: left;
   }
+  .section-4 .market {
+    width: 758px;
+  }
   .section-4 .invest-div {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 90vw;
+    width: 800px;
   }
   .section-4 .invest-div .invest {
     margin-top: 50px;
-    width: 400px;
+    width: 500px;
     height: 219px;
   }
   .section-4 .invest-div .invest h3 {
@@ -651,16 +573,16 @@ footer {
   }
   .section-4 .stats {
     margin-top: 7rem;
+    width: 800px;
   }
   .section-4 .stats .first-set {
-    width: 90vw;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
   }
   .section-4 .stats .first-set .div1 {
     margin-top: 100px;
-    width: 90vw;
+    width: 420px;
   }
   .section-4 .stats .first-set .div1 h3 {
     font-weight: 700;
@@ -670,24 +592,16 @@ footer {
   .section-4 .stats .first-set .div1 p {
     margin-bottom: 1.5rem;
   }
+  .section-4 .stats .first-set img {
+    width: 70%;
+  }
   .section-4 .stats .div3 {
     display: flex;
-    width: 90vw;
+    width: 800px;
     justify-content: space-between;
   }
   .section-4 .stats .div3 .text {
     width: 454px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .first-set {
-    width: 1230px;
-  }
-  .first-set .div1 {
-    width: 420px;
-  }
-  .div3 {
-    width: 1200px;
   }
 }
 footer {
@@ -715,11 +629,6 @@ footer .mine div p {
 footer .mine div h3 {
   font-weight: 700;
   font-size: 32px;
-}
-footer .mine form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 footer .mine form input {
   border-top: 0;
@@ -788,9 +697,6 @@ footer .links ul li a {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
-footer .links ul li a:hover {
-  color: rgb(54, 113, 233);
-}
 footer .copyright {
   color: rgb(255, 255, 255);
 }
@@ -800,7 +706,7 @@ footer .copyright .social-icons {
 
 @media screen and (min-width: 992px) {
   footer {
-    padding: 12rem 20px 14px;
+    padding: 12rem 120px 14px 120px;
   }
   footer .mine {
     padding: 2rem;
@@ -817,6 +723,9 @@ footer .copyright .social-icons {
   }
   footer .mine form {
     width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   footer .mine form input {
     width: 18rem;
@@ -831,17 +740,88 @@ footer .copyright .social-icons {
   footer .links ul {
     text-align: left;
   }
-  footer .links div.payment {
-    margin-left: 1rem;
+  footer .links div {
+    text-align: center;
   }
-  footer .links div.payment img {
+  footer .links div div.payment {
+    margin-right: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .links div div.payment img {
+    width: 40%;
     -o-object-fit: contain;
        object-fit: contain;
-    margin-right: 1rem;
+    margin-top: 1rem;
   }
   footer .copyright {
     display: flex;
     justify-content: space-between;
     width: 100%;
+  }
+}
+.nav-container {
+  transform: translateX(-100%);
+  position: absolute;
+  transition: all 2s;
+}
+.nav-container > .login > .span-1 {
+  margin-right: 10px;
+}
+.nav-container > .login > button {
+  margin-left: 12px;
+  border-radius: 32px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(54, 113, 233);
+  padding: 7px 16px 7px 16px;
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 1;
+  transform: translateX(0%);
+  background-color: rgb(13, 13, 43);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.dropdown ul > li {
+  font-size: 22px;
+  margin-top: 2rem;
+}
+.dropdown .login {
+  font-size: 22px;
+}
+
+.bars {
+  visibility: hidden;
+}
+
+.x-mark {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  .nav-container {
+    transform: translateX(0);
+    position: initial;
+    display: flex;
+    align-items: center;
+  }
+  .nav-container > .list {
+    display: flex;
+    margin-right: 25px;
+  }
+  .nav-container > .list > li {
+    margin-right: 1rem;
+    opacity: 0.8;
+  }
+  .nav-container .login {
+    display: flex;
+    align-items: center;
   }
 }/*# sourceMappingURL=main.css.map */

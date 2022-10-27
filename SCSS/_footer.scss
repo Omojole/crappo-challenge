@@ -21,7 +21,6 @@ footer {
     }
 
     form {
-      @include flex(flex,space-between,center);
       input {
         border-top: 0;
         border-left: 0;
@@ -67,21 +66,16 @@ footer {
         margin-top: 1rem;
       }
     }
-    ul{
+    ul {
       text-align: center;
       width: 12rem;
       color: $clr-white;
       li {
         margin-top: 1rem;
         opacity: 0.8;
-          
         a {
           color: $clr-white;
           text-decoration: none;
-          &:hover{
-            color: $tertiary-color;
-          }
-  
         }
       }
     }
@@ -95,8 +89,7 @@ footer {
 }
 @include query-md {
   footer {
-    // padding: 12rem 120px 14px 120px;
-    padding: 12rem 20px 14px ;
+    padding: 12rem 120px 14px 120px;
 
     .mine {
       padding: 2rem;
@@ -110,6 +103,7 @@ footer {
       }
       form {
         width: 30rem;
+        @include flex(flex, space-between, center);
         input {
           width: 18rem;
         }
@@ -124,11 +118,20 @@ footer {
       ul{
         text-align: left;
       }
-      div.payment {
-        margin-left: 1rem;
-        img {
-          object-fit: contain;
+      div{
+        text-align: center;
+        div.payment {
           margin-right: 1rem;
+  align-items: center;    
+      display: flex;
+          flex-direction: column;
+          img {
+            width:40% ;
+            object-fit: contain;
+            margin-top: 1rem;
+  
+            // margin-right: 1rem;
+          }
         }
       }
     }

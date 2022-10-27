@@ -1,3 +1,9 @@
+.section-3 {
+  padding: 6rem 1rem 0 1rem;
+  & > button {
+    color: $clr-white;
+  }
+}
 .crypto-div {
   width: 100%;
   display: flex;
@@ -66,16 +72,11 @@
   }
 }
 
-.section-3 {
-  padding: 6rem 1rem 0 1rem;
-  & > button {
-    color: $clr-white;
-  }
-}
 
 @include query-md {
   .section-3 {
-    padding: 12rem 10px 5rem ;
+    // padding: 12rem 120px 5rem;
+    padding: 12rem 0 5rem;
 
     text-align: center;
 
@@ -83,8 +84,11 @@
       @include font(700, 40px);
     }
     .crypto-div {
-      justify-content: space-around;
       flex-direction: row;
+      justify-content: space-around;
+      // .crypto{
+      //   width: auto;
+      // }
     }
   }
 }
