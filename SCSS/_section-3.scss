@@ -75,7 +75,8 @@
 
 @include query-md {
   .section-3 {
-    padding: 12rem 120px 5rem 120px;
+    padding: 12rem 10px 5rem ;
+
     text-align: center;
 
     & > h2 {
@@ -83,6 +84,7 @@
     }
     .crypto-div {
       justify-content: space-around;
+      flex-direction: row;
     }
   }
 }

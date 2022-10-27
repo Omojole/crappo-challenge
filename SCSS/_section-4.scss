@@ -6,7 +6,7 @@
     font-size: 40px;
     margin-bottom: 5rem;
   }
-  & > div > .invest {
+  div > .invest {
     h3 {
       @include font(700, 32px);
       margin-bottom: 1.5rem;
@@ -14,7 +14,7 @@
     p {
       opacity: 0.8;
     }
-    & > button {
+    button {
       @include font(500, 18px);
       margin-top: 1rem;
       margin-bottom: 1rem;
@@ -25,52 +25,49 @@
       background-color: $tertiary-color;
     }
   }
-  & > .stats {
+  .stats {
     margin-top: 5rem;
     .first-set {
-     .div1 {
-        p{
-            opacity: .8;
-
+      .div1 {
+        p {
+          opacity: 0.8;
         }
-       button {
-        border: none;
-        margin-top: 1rem;
-        background-color: $tertiary-color;
-        color: $clr-white;
-        padding:16px 32px;
-        border-radius:  32px;
-        @include font(500,18px);
+        button {
+          border: none;
+          margin-top: 1rem;
+          background-color: $tertiary-color;
+          color: $clr-white;
+          padding: 16px 32px;
+          border-radius: 32px;
+          @include font(500, 18px);
+        }
+      }
+      .div2 {
+        margin-top: 2rem;
       }
     }
-    .div2 {
-      margin-top: 2rem;
+    .div3 {
+      margin-top: 7rem;
+      div {
+        h3 {
+          @include font(700, 32px);
+        }
+        .analysis {
+          opacity: 0.8;
+          margin-bottom: 1rem;
+          margin-top: 1rem;
+        }
+        button {
+          border: none;
+          background-color: $tertiary-color;
+          color: $clr-white;
+          padding: 16px 32px;
+          border-radius: 32px;
+          margin-bottom: 2rem;
+          @include font(500, 18px);
+        }
+      }
     }
-}
-
-        .div3 {
-          margin-top: 7rem;
-          & > div {
-           h3{
-
-               @include font(700,32px);
-           }
-            & > .analysis {
-                opacity: .8;
-              margin-bottom: 1rem;
-              margin-top: 1rem;
-            }
-            & > button {
-                border: none;
-              background-color: $tertiary-color;
-              color: $clr-white;
-              padding: 16px 32px;
-              border-radius: 32px;
-              margin-bottom: 2rem;
-              @include font(500,18px)
-            }
-          }
-    } 
   }
 }
 //do mixin for buttons
@@ -81,12 +78,13 @@
     align-items: center;
     flex-direction: column;
     text-align: left;
-    .market {
-      width: 758px;
-    }
+    // .market {
+    //   width: 758px;
+    // }
     .invest-div {
       @include flex(flex, space-between, flex-start);
-      width: 1134px;
+      // width: 1134px;
+      width: 90vw;
       .invest {
         margin-top: 50px;
         width: 400px;
@@ -96,33 +94,45 @@
         }
       }
     }
-    .stats{
-        margin-top: 7rem;
-        .first-set{
-width: 1230px;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: row-reverse;
-            .div1{
-                margin-top: 100px;
-                width: 420px;
-                h3{
-                    @include font(700,32px);
-                    margin-bottom:1rem;
-                }
-                p{
-                    margin-bottom: 1.5rem;
-                }
-            }
+    .stats {
+      margin-top: 7rem;
+      .first-set {
+        width: 90vw;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        .div1 {
+          margin-top: 100px;
+          width: 90vw;
+          h3 {
+            @include font(700, 32px);
+            margin-bottom: 1rem;
+          }
+          p {
+            margin-bottom: 1.5rem;
+          }
         }
-        .div3{
-            display: flex;
-            width: 1200px;
-            justify-content: space-between;
-            .text{
-                width: 454px;
-            }
+      }
+      .div3 {
+        display: flex;
+        // width: 1200px;
+        width: 90vw;
+        justify-content: space-between;
+        .text {
+          width: 454px;
         }
+      }
     }
+  }
+}
+@include query-lg{
+  .first-set {
+    width: 1230px;
+    .div1 {
+      width: 420px;
+    }
+  }
+  .div3 {
+    width: 1200px;
   }
 }

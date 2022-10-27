@@ -95,7 +95,8 @@ footer {
 }
 @include query-md {
   footer {
-    padding: 12rem 120px 14px 120px;
+    // padding: 12rem 120px 14px 120px;
+    padding: 12rem 20px 14px ;
 
     .mine {
       padding: 2rem;
@@ -119,11 +120,12 @@ footer {
       width: 100%;
       display: grid;
       align-items: flex-start;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 2fr;
       ul{
         text-align: left;
       }
       div.payment {
+        margin-left: 1rem;
         img {
           object-fit: contain;
           margin-right: 1rem;
