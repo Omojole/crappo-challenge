@@ -71,11 +71,9 @@
     }
   }
 }
-//do mixin for buttons
 @include query-md {
   .section-4 {
-    // padding: 3rem 120px 0 120px;
-    padding: 3rem 70px 0 ;
+    padding: 3rem 70px 0;
 
     display: flex;
     align-items: center;
@@ -86,11 +84,9 @@
     }
     .invest-div {
       @include flex(flex, space-between, flex-start);
-      // width: 1134px;
       width: 800px;
       .invest {
         margin-top: 50px;
-        // width: 400px;
         width: 500px;
         height: 219px;
         h3 {
@@ -102,7 +98,6 @@
       margin-top: 7rem;
       width: 800px;
       .first-set {
-        // width: 1230px;
         display: flex;
         justify-content: space-between;
         flex-direction: row-reverse;
@@ -117,19 +112,39 @@
             margin-bottom: 1.5rem;
           }
         }
-        img{
+        img {
           width: 70%;
         }
       }
       .div3 {
         display: flex;
-        // width: 1200px;
         width: 800px;
-
         justify-content: space-between;
         .text {
           width: 454px;
         }
+      }
+    }
+  }
+}
+@include query-lg {
+  .section-4 {
+    padding: 3rem 120px 0;
+    .invest-div {
+      width: 1134px;
+      .invest {
+        width: 400px;
+      }
+    }
+    .stats {
+      width: 1230px;
+      .first-set {
+        img {
+          width: auto;
+        }
+      }
+      .div3 {
+        width: 1200px;
       }
     }
   }

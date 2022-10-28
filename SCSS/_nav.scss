@@ -28,14 +28,28 @@
     ul > li {
       font-size: 22px;
       margin-top: 2rem;
+      &:hover{
+        color:$tertiary-color;
+        cursor: pointer;
+      }
     }
     .login {
       font-size: 22px;
+      .span-1{
+        &:hover{
+          color:$tertiary-color;
+          cursor: pointer;
+        }
+      }
+      button{
+        &:hover{
+          color:$primary-color;
+          cursor: pointer;
+        }
+  
+      }
     }
   }
-  // .fa-xmark:before {
-  //   content: "";
-  // }
   .bars{
     visibility: hidden;
   }
@@ -46,25 +60,38 @@
     .nav-container {
       transform: translateX(0);
       position: initial;
-      // width: auto;
-      // height: auto;
-      // z-index: 1;
       display: flex;
       align-items: center;
-      // transform: translateX(0);
-      // top: 20px;
-      // right: 118px;
       & > .list {
         display: flex;
         margin-right: 25px;
         & > li {
           margin-right: 1rem;
           opacity: 0.8;
+          &:hover{
+            color:$tertiary-color;
+            cursor: pointer;
+          }
+    
         }
       }
       .login {
         display: flex;
         align-items: center;
+        .span-1{
+          &:hover{
+            color:$tertiary-color;
+            cursor: pointer;
+          }
+  
+        }
+        button{
+          &:hover{
+            color:$primary-color;
+            cursor: pointer;
+          }
+    
+        }
       }
     }
     // .logo-container{

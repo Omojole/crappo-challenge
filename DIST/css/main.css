@@ -36,6 +36,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+button:hover {
+  transform: scale(1.2);
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -201,6 +205,11 @@ footer {
     margin-top: 50px;
   }
 }
+@media screen and (min-width: 1300px) {
+  .section-1 {
+    padding: 0 120px 0;
+  }
+}
 .section-2 {
   position: relative;
   display: flex;
@@ -320,17 +329,17 @@ footer {
   .section-2 {
     padding: 100px 70px 0px;
   }
-  .section-2 > .numbers {
+  .section-2 .numbers {
     flex-direction: row;
   }
-  .section-2 > .numbers > .num_ > img {
+  .section-2 .numbers .num_ > img {
     border: none;
   }
-  .section-2 > .numbers > .num_ > div > h2 {
+  .section-2 .numbers .num_ > div > h2 {
     font-weight: 700;
     font-size: 30px;
   }
-  .section-2 > .numbers > .num_ > div > p {
+  .section-2 .numbers .num_ > div > p {
     opacity: 0.8;
   }
   .section-2 > .crappo {
@@ -382,6 +391,18 @@ footer {
   }
   .section-2 > .positioning > form > button, .section-2 > .positioning > form select {
     margin: 0;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .section-2 {
+    padding: 100px 120px 0px 120px;
+  }
+  .section-2 .numbers .num_ {
+    width: 334px;
+    margin-left: 99px;
+  }
+  .section-2 .crappo {
+    width: 1240px;
   }
 }
 .section-3 {
@@ -474,6 +495,11 @@ footer {
   .section-3 .crypto-div {
     flex-direction: row;
     justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .section-3 {
+    padding: 12rem 120px 5rem;
   }
 }
 .section-4 {
@@ -604,6 +630,26 @@ footer {
     width: 454px;
   }
 }
+@media screen and (min-width: 1300px) {
+  .section-4 {
+    padding: 3rem 120px 0;
+  }
+  .section-4 .invest-div {
+    width: 1134px;
+  }
+  .section-4 .invest-div .invest {
+    width: 400px;
+  }
+  .section-4 .stats {
+    width: 1230px;
+  }
+  .section-4 .stats .first-set img {
+    width: auto;
+  }
+  .section-4 .stats .div3 {
+    width: 1200px;
+  }
+}
 footer {
   padding: 12rem 14px 14px 0;
   display: flex;
@@ -689,6 +735,9 @@ footer .links ul {
   width: 12rem;
   color: rgb(255, 255, 255);
 }
+footer .links ul h4 {
+  opacity: 0.6;
+}
 footer .links ul li {
   margin-top: 1rem;
   opacity: 0.8;
@@ -697,16 +746,27 @@ footer .links ul li a {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
+footer .links ul li a:hover {
+  color: rgb(54, 113, 233);
+  cursor: pointer;
+}
+footer .links div h4 {
+  opacity: 0.6;
+}
 footer .copyright {
   color: rgb(255, 255, 255);
 }
 footer .copyright .social-icons {
   margin-right: 1rem;
 }
+footer .copyright .social-icons:hover {
+  color: rgb(54, 113, 233);
+  cursor: pointer;
+}
 
 @media screen and (min-width: 992px) {
   footer {
-    padding: 12rem 120px 14px 120px;
+    padding: 12rem 120px 14px;
   }
   footer .mine {
     padding: 2rem;
@@ -744,7 +804,7 @@ footer .copyright .social-icons {
     text-align: center;
   }
   footer .links div div.payment {
-    margin-right: 1rem;
+    margin-left: 1rem;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -759,6 +819,14 @@ footer .copyright .social-icons {
     display: flex;
     justify-content: space-between;
     width: 100%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  footer .links div div.payment {
+    flex-direction: row;
+  }
+  footer .links div img {
+    margin-right: 1rem;
   }
 }
 .nav-container {
@@ -793,8 +861,20 @@ footer .copyright .social-icons {
   font-size: 22px;
   margin-top: 2rem;
 }
+.dropdown ul > li:hover {
+  color: rgb(54, 113, 233);
+  cursor: pointer;
+}
 .dropdown .login {
   font-size: 22px;
+}
+.dropdown .login .span-1:hover {
+  color: rgb(54, 113, 233);
+  cursor: pointer;
+}
+.dropdown .login button:hover {
+  color: rgb(13, 13, 43);
+  cursor: pointer;
 }
 
 .bars {
@@ -820,8 +900,20 @@ footer .copyright .social-icons {
     margin-right: 1rem;
     opacity: 0.8;
   }
+  .nav-container > .list > li:hover {
+    color: rgb(54, 113, 233);
+    cursor: pointer;
+  }
   .nav-container .login {
     display: flex;
     align-items: center;
+  }
+  .nav-container .login .span-1:hover {
+    color: rgb(54, 113, 233);
+    cursor: pointer;
+  }
+  .nav-container .login button:hover {
+    color: rgb(13, 13, 43);
+    cursor: pointer;
   }
 }/*# sourceMappingURL=main.css.map */

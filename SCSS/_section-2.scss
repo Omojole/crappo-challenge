@@ -107,12 +107,9 @@
   .section-2 {
     padding: 100px 70px 0px ;
 
-    // padding: 100px 120px 0px 120px;
-    & > .numbers {
+     .numbers {
       flex-direction: row;
-      & > .num_ {
-        //width:334px;
-        // margin-left: 99px;
+       .num_ {
         & > img {
           border: none;
         }
@@ -128,7 +125,6 @@
       }
     }
     & >.crappo {
-      // width: 1240px;
       display: flex;
       flex-direction:row-reverse;
       justify-content: space-between;
@@ -179,5 +175,20 @@
       }
     }
 
+  }
+}
+@include query-lg{
+  .section-2{
+    padding: 100px 120px 0px 120px;
+.numbers{
+  .num_{
+        width:334px;
+        margin-left: 99px;
+
+  }
+}
+.crappo {
+  width: 1240px;
+}
   }
 }

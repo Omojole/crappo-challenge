@@ -31,7 +31,6 @@
   .section-1 {
     display: flex;
     flex-direction: row;
-    // padding: 0 120px 0 120px;
 padding: 0 70px;
     .first-div {
       width: 588px;
@@ -47,5 +46,11 @@ padding: 0 70px;
       width: 604px;
       margin-top: 50px;
     }
+  }
+}
+@include query-lg{
+  .section-1{
+    padding: 0 120px 0;
+
   }
 }

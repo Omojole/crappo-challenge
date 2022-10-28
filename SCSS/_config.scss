@@ -33,6 +33,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+//All buttons on hover
+button:hover{
+  transform: scale(1.2);
+}
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -111,6 +115,13 @@ footer{
     @content;
   }
 }
+@mixin  query-lg{
+  @media screen and (min-width:1300px){
+    @content;
+  }
+} 
+  
+
 @mixin font($weight,$size){
   font-weight: $weight;
   font-size: $size;
