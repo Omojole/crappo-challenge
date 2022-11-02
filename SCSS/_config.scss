@@ -86,13 +86,10 @@ $tertiary-color: rgb(54, 113, 233);
 $clr-white: rgb(255, 255, 255);
 $light-white: rgba(255, 255, 255, 0.1);
 $section-3: rgb(242, 242, 242);
-//Mixins
-@mixin flex($display, $justify-content, $align-items) {
-  display: $display;
-  justify-content: $justify-content;
-  align-items: $align-items;
-}
+
+//font
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 //background color for each sections
 header,
 .section-1,
@@ -110,20 +107,28 @@ footer{
   background: linear-gradient($secondary-color,30%,$primary-color );
 
 }
+
+// general mixins
+@mixin flex($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+//for fonts
 @mixin query-md {
   @media screen and (min-width: 992px) {
     @content;
   }
 }
+
 @mixin  query-lg{
   @media screen and (min-width:1300px){
     @content;
   }
 } 
   
-
 @mixin font($weight,$size){
   font-weight: $weight;
   font-size: $size;
 }
-//use percentage for positioning or vh
