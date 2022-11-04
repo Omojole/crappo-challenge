@@ -36,6 +36,11 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+button {
+  border: none;
+  display: flex;
+  align-items: center;
+}
 button:hover {
   transform: scale(1.2);
 }
@@ -419,7 +424,7 @@ footer {
   align-items: center;
 }
 .crypto-div .crypto {
-  width: 320px;
+  width: 300px;
   height: 433px;
   border-radius: 16px;
   margin: 2.5rem 0;
@@ -838,6 +843,7 @@ footer .copyright .social-icons:hover {
   margin-right: 10px;
 }
 .nav-container > .login > button {
+  border: none;
   margin-left: 12px;
   border-radius: 32px;
   color: rgb(255, 255, 255);
@@ -871,6 +877,9 @@ footer .copyright .social-icons:hover {
 .dropdown .login .span-1:hover {
   color: rgb(54, 113, 233);
   cursor: pointer;
+}
+.dropdown .login button {
+  border: none;
 }
 .dropdown .login button:hover {
   color: rgb(13, 13, 43);

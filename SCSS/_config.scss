@@ -34,9 +34,14 @@ html:focus-within {
 }
 
 //All buttons on hover
-button:hover{
+button
+{
   border: none;
+  display: flex;
+  align-items: center;
+&:hover{
   transform: scale(1.2);
+}
 }
 /* Set core body defaults */
 body {

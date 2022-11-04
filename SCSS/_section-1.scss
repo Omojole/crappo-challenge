@@ -11,9 +11,7 @@
   }
 
   & > .btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(flex,space-between,center);
     border-radius: 32px;
     padding: 1.5rem;
     height: 2.5rem;
