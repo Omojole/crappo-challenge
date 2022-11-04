@@ -36,12 +36,7 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-button {
-  border: none;
-  display: flex;
-  align-items: center;
-}
-button:hover {
+button :hover {
   transform: scale(1.2);
 }
 
@@ -175,6 +170,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: none;
   border-radius: 32px;
   padding: 1.5rem;
   height: 2.5rem;

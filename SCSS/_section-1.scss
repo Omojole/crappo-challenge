@@ -12,6 +12,7 @@
 
   & > .btn {
     @include flex(flex,space-between,center);
+    border: none;
     border-radius: 32px;
     padding: 1.5rem;
     height: 2.5rem;
