@@ -840,6 +840,7 @@ footer .copyright .social-icons:hover {
 }
 .nav-container > .login > button {
   border: none;
+  align-items: center;
   margin-left: 12px;
   border-radius: 32px;
   color: rgb(255, 255, 255);
